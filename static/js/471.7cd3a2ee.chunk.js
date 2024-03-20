@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkorenda_kempera=self.webpackChunkorenda_kempera||[]).push([[471],{471:function(e,n,r){r.r(n),r.d(n,{default:function(){return a}});var u=r(184);function a(){return(0,u.jsx)(u.Fragment,{})}}}]);
+//# sourceMappingURL=471.7cd3a2ee.chunk.js.map
