@@ -1,46 +1,46 @@
-import axios from "axios";
+// import axios from "axios";
 
-axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
+// axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
-export async function fetchTrendingFilms(){
+// export async function fetchTrendingFilms(){
     
-    const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
-    const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}&language=en-US`;
-    const response = await axios.get(url);
-    return response.data.results;
-}
+//     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
+//     const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}&language=en-US`;
+//     const response = await axios.get(url);
+//     return response.data.results;
+// }
 
-export async function fetchKeywordFilms(keyword){
+// export async function fetchKeywordFilms(keyword){
     
-    const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&include_adult=false&language=en-US&page=1&query=${keyword}`;
-    const response = await axios.get(url);
-    return response.data.results;
-}
+//     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
+//     const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&include_adult=false&language=en-US&page=1&query=${keyword}`;
+//     const response = await axios.get(url);
+//     return response.data.results;
+// }
 
-export async function fetchDitailsFilms(movieId){
+// export async function fetchDitailsFilms(movieId){
     
-    const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
-    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-    const response = await axios.get(url);
-    return response.data;
-}
+//     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
+//     const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
+//     const response = await axios.get(url);
+//     return response.data;
+// }
 
-export async function fetchActors(movieId){
+// export async function fetchActors(movieId){
     
-    const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
-    const url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=en-US`;
-    const response = await axios.get(url);
-    return response.data.cast;
-}
+//     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
+//     const url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=en-US`;
+//     const response = await axios.get(url);
+//     return response.data.cast;
+// }
 
-export async function fetchReviews(movieId){
+// export async function fetchReviews(movieId){
     
-    const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
-    const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}&language=en-US&page=1`;
-    const response = await axios.get(url);
-    return response.data.results;
-}
+//     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
+//     const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}&language=en-US&page=1`;
+//     const response = await axios.get(url);
+//     return response.data.results;
+// }
 
 
 //key api = 18a0b0a62e05a91cf2323f4a4ccd641e;

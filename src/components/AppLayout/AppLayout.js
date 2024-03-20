@@ -11,7 +11,7 @@ const AppLayout=()=>{
         <Header>
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/movies">Movies</Link>
+                <Link to="/catalog">Campers</Link>
             </nav>
         </Header>   
 

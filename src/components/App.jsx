@@ -1,19 +1,12 @@
 import { lazy } from 'react';
 import { GlobalStyle } from './GlobalStyle';
 import { Routes, Route } from "react-router-dom";
-// import AppLayout from './AppLayout/AppLayout';
-// import Home from '../Pages/Home/Home';
-// import Movies from '../Pages/Movies/Movies';
-// import MovieDetails from '../Pages/MovieDetails/MovieDetails';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
 
 const AppLayout = lazy(() => import('./AppLayout/AppLayout'));
-const Home = lazy(() => import('../Pages/Home/Home'));
-const Movies = lazy(() => import('../Pages/Movies/Movies'));
-const MovieDetails = lazy(() => import('../Pages/MovieDetails/MovieDetails'));
-const Cast = lazy(() => import('./Cast/Cast'));
-const Reviews = lazy(() => import('./Reviews/Reviews'));
+const HomePage = lazy(() => import('../Pages/HomePage/HomePage'));
+const CatalogPage = lazy(() => import('../Pages/CatalogPage/CatalogPage'));
+const FavoritePage = lazy(() => import('../Pages/FavoritePage/FavoritePage'));
+
 
 export const App = () => {
   return (
@@ -21,14 +14,15 @@ export const App = () => {
 
       <Routes>
         <Route path="/" element={<AppLayout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="movies" element={<Movies/>}/>
-          <Route  path="movies/:movieId" element={<MovieDetails/>}>
-            <Route path="cast" element={<Cast/>}/>
+          <Route index element={<HomePage/>}/>
+          <Route path="catalog" element={<CatalogPage/>}/>
+          <Route path="favorite" element={<FavoritePage/>}/>
+          {/* <Route  path="catalog/:camperId" element={<CampareDetails/>}>
+            <Route path="features" element={<Features/>}/>
             <Route path="reviews" element={<Reviews/>}/>
-          </Route>
+          </Route> */}
         </Route>
-        <Route path="*" element={<Home/>} />
+        <Route path="*" element={<HomePage/>} />
       </Routes>
 
       <GlobalStyle/>

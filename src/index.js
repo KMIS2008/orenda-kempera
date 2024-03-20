@@ -2,22 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import { BrowserRouter } from "react-router-dom";
-// import './index.css';
+import { Provider } from "react-redux";
 import { ThemeProvider } from 'styled-components';
+import { store } from "./redux/store";
 
 const theme = {
   colors: {
-    white: '#fafafa',
-    black: '#212121',
-    background: '#D3D3D3',
-    gray: "#808080",
-    blue: '#F0F8FF',
-    darkblue: '#4e5dda',
-    border: '#d8d1d1',
-    rose: '#f2ead1',
-    purpel: 'rgb(190 69 163)',
-    red: 'rgb(231 13 13)',
-    green: '#17b717',
+    // white: '#fafafa',
+    // black: '#212121',
   },
 
   spacing: value => `${value * 5}px`,
@@ -26,12 +18,12 @@ const theme = {
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-    <BrowserRouter basename="/orenda-kempera">
-
-   <ThemeProvider theme = {theme}>
-    <App />
-   </ThemeProvider> 
-
+    <BrowserRouter basename="orenda-kempera">
+      {/* <Provider store={store}> */}
+        <ThemeProvider theme = {theme}>
+         <App />
+       </ThemeProvider>        
+      {/* </Provider> */}
     </BrowserRouter>
 
   </React.StrictMode>
