@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import istockphoto from '../../img/istockphoto.jpg'
+import istockphoto from '../../assets/istockphoto.jpg'
 
 export const BackGround = styled.div`
   background-image: url(${istockphoto});
