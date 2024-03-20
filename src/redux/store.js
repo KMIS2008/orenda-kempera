@@ -1,20 +1,20 @@
-import { configureStore } from "@reduxjs/toolkit";
-import storage from 'redux-persist/lib/storage';
+// import { configureStore } from "@reduxjs/toolkit";
+// import storage from 'redux-persist/lib/storage';
 
-import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
+// import {
+//   persistStore,
+//   persistReducer,
+//   FLUSH,
+//   REHYDRATE,
+//   PAUSE,
+//   PERSIST,
+//   PURGE,
+//   REGISTER,
   
-} from "redux-persist";
+// } from "redux-persist";
 
-import { catalogReducer } from "./catalogSlice";
-import {favoriteReducer} from './favoriteSlice';
+// import { catalogReducer } from "./catalogSlice";
+// import {favoriteReducer} from './favoriteSlice';
 
 // const favoritePersistConfig = {
 //     key: 'favorite',
