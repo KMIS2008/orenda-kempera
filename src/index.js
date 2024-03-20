@@ -8,8 +8,12 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    // white: '#fafafa',
-    // black: '#212121',
+    black: '#101828',
+    grey:'#475467',
+    red:'#E44848',
+    yellow:'#FFC531',
+    beige:'#F2F4F7',
+    white:'#F7F7F7',
   },
 
   spacing: value => `${value * 5}px`,

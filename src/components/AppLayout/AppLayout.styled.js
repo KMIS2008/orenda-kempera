@@ -5,7 +5,7 @@ export const Container = styled.div`
 width: 1200px;
 margin: 0%, auto;
 padding: ${p=>p.theme.spacing(10)};
-background-color: #efef1d;
+background-color: #FFC531;
 `
 export const Header = styled.header`
 width: 900px;

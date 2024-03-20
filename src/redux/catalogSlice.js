@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+// import fetchCamperCatalog from './operations';
 
 const catalogSlice = createSlice({
     name: "catalog",
