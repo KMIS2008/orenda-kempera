@@ -1,6 +1,7 @@
-import sprite from '../../assets/sprite.svg'
+import sprite from '../../assets/sprite.svg';
+import {CamperItem} from '../CamperItem/CamperItem';
 
-export const CamperCard = ({data}) => {
+export const CamperCard = () => {
     return (
       <>
       <div>
@@ -53,7 +54,6 @@ export const CamperCard = ({data}) => {
         <h3>Vehicle type</h3>
         
         <div>
-        
             <button type="button">
               <svg width= '40px' height='28px'>
                  <use xlinkHref={sprite + '#icon-Button-three'} />
@@ -80,12 +80,8 @@ export const CamperCard = ({data}) => {
 
       </div>
 
-
-        <div>
-           <img src={data.img} alt="camper"></img>
-        </div>
+   <CamperItem/>      
  
-
       </>
     );
   }; 
