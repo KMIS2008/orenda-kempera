@@ -3,6 +3,8 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL = "https://6570b71409586eff6641d7fb.mockapi.io";
 
+
+
 export const fetchCamperCatalog = createAsyncThunk("catalog/fetchAll", async (_, thunkAPI)=>{
     try {
           const response = await axios.get("/catalog");

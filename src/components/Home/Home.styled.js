@@ -3,8 +3,10 @@ import istockphoto from '../../assets/istockphoto.jpg'
 
 export const BackGround = styled.div`
   background-image: url(${istockphoto});
+  width: 1300px;
   height: 100vh;
   background-repeat: no-repeat;
+  background-size: cover;
 
   background-size: 80% auto;
   box-sizing: border-box;

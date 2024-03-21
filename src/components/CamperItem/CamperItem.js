@@ -1,11 +1,13 @@
 import sprite from '../../assets/sprite.svg';
+import {ContainerItem, Image, Title, Header, Price, LocalRewiew, Reviews, Location, Description, ListButton, ButtonLi, 
+    ButtonMore, Button} from './CamperItem.styled'
 
 export const CamperItem = ({value}) => {
     const {
         adults,
         // children,
         // consumption,
-        description,
+        // description,
         // engine,
         // form,
         // height,
@@ -25,77 +27,101 @@ export const CamperItem = ({value}) => {
 
     return (
         <>
-                    <li>
-                        <img src={gallery[0]} alt={name}></img>
-                        <h2>{name}</h2>
-                        <p>€{price}.00
-                        <span>          
-                             <svg width= '24px' height='24px'>
-                               <use xlinkHref={sprite + '#icon-Hartdefault'} />
-                             </svg>
-                           </span> 
-                        </p>
+                    <ContainerItem>
+                        <Image src={gallery[0]} alt={name}></Image>
+                        <div>
+                            <Header>
+                                 <Title>{name}</Title>
+                                <Price>€{price}.00
+                                  <span>          
+                                    <svg width= '24px' height='24px'>
+                                      <use xlinkHref={sprite + '#icon-Hartdefault'} />
+                                    </svg>
+                                  </span> 
+                                </Price>
+                            </Header>
+
+                        <LocalRewiew>
                         <p>
-                            <span>          
                              <svg width= '16px' height='16px'>
                                <use xlinkHref={sprite + '#icon-star'} />
-                             </svg>
-                           </span> 
-                            {rating} ({reviews.length} Rewiews)
-                           <span>          
-                             <svg width= '16px' height='16px'>
-                               <use xlinkHref={sprite + '#icon-map-pin'} />
-                             </svg>
-                           </span> 
-                           {location}
+                             </svg>                       
+                          <Reviews>          
+                             {rating} ({reviews.length} Rewiews)
+                           </Reviews> 
+                            
                         </p>
 
-                        <p>{description}</p>
+                        <p>
+                            <svg width= '16px' height='16px'>
+                               <use xlinkHref={sprite + '#icon-map-pin'} />
+                            </svg>
+                           
+                           <Location>  
+                             {location}           
+                           </Location>                     
+                        </p>
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-Users'} />
-                             </svg>
-                             <p>{adults} adults</p>
-                        </button>
+                        </LocalRewiew>    
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-Container'} />
-                             </svg>
-                             <p>Automatic</p>
-                        </button>
+                        <Description>The pictures shown here are example vehicles of the respective.</Description>
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-Vertical-container'} />
-                             </svg>
-                             <p>Petrol</p>
-                        </button>
+                        <ListButton>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                  <use xlinkHref={sprite + '#icon-Users'} />
+                                </svg>
+                                <p>{adults} adults</p>
+                              </Button>     
+                            </ButtonLi>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                  <use xlinkHref={sprite + '#icon-Container'} />
+                                </svg>
+                                <p>Automatic</p>
+                              </Button>
+                            </ButtonLi>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                  <use xlinkHref={sprite + '#icon-Vertical-container'} />
+                                </svg>
+                                <p>Petrol</p>
+                              </Button>                                
+                            </ButtonLi>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                  <use xlinkHref={sprite + '#icon-eat'} />
+                                </svg>
+                                <p>Kitchen</p>
+                              </Button>                                
+                            </ButtonLi>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                   <use xlinkHref={sprite + '#icon-bad'} />
+                                </svg>
+                                <p>{details.beds}beds</p>
+                              </Button>                                
+                            </ButtonLi>
+                            <ButtonLi>
+                              <Button type="button">
+                                <svg width= '20px' height='20px'>
+                                   <use xlinkHref={sprite + '#icon-Vector'} />
+                                </svg>
+                                <p>AC</p>
+                              </Button>                                
+                            </ButtonLi>
+                        </ListButton>
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-eat'} />
-                             </svg>
-                             <p>Kitchen</p>
-                        </button>
+              <ButtonMore type='button' >Show more</ButtonMore>
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-bad'} />
-                             </svg>
-                             <p>{details.beds}beds</p>
-                        </button>
+                        </div>
 
-                        <button type="button">
-                             <svg width= '20px' height='20px'>
-                                <use xlinkHref={sprite + '#icon-Vector'} />
-                             </svg>
-                             <p>AC</p>
-                        </button>
-
-              <button type='button' >Show more</button>
-                    </li>        
+                    </ContainerItem>        
         </>
     );
   }; 

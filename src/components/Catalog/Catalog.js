@@ -2,86 +2,87 @@ import { useSelector } from 'react-redux';
 import sprite from '../../assets/sprite.svg';
 import {selectCampers} from '../../redux/selectors';
 import {CamperItem} from '../CamperItem/CamperItem';
+import { ContainerCatalog, Label, Input, Text, Tittle, Button, ContainerButton, ButtonSearch} from './Catalog.styled';
 
 export const Catalog = () => {
 
   const campers = useSelector(selectCampers);
-  
+
     return (
-      <>
+      <ContainerCatalog>
       <div>
        
-        <label> Location 
-        <input type="text" name="location" />
-       </label>
+        <Label> Location 
+        <Input type="text" name="location" />
+       </Label>
 
-        <p>Filters</p>
+        <Text>Filters</Text>
 
-        <h3>Vehicle equipment</h3>
+        <Tittle>Vehicle equipment</Tittle>
 
-        <div>
-            <button type="button">
+        <ContainerButton>
+            <Button type="button">
               <svg width= '32px' height='32px'>
                 <use xlinkHref={sprite + '#icon-Vector'} />
               </svg>
               <p>AC</p>
-            </button>
+            </Button>
 
-            <button type="button">
+            <Button type="button">
               <svg width= '32px' height='32px'>
                 <use xlinkHref={sprite + '#icon-Container'} />
               </svg>
               <p>Automatic</p>
-            </button>
+            </Button>
 
-            <button type="button">
+            <Button type="button">
                <svg width= '32px' height='32px'>
                  <use xlinkHref={sprite + '#icon-eat'} />
                </svg>
               <p>Kitchen</p>
-            </button>
+            </Button>
 
-            <button type="button">
+            <Button type="button">
                <svg width= '32px' height='32px'>
                  <use xlinkHref={sprite + '#icon-TV'} />
                </svg>
                <p>TV</p>
-            </button>
+            </Button>
         
-            <button type="button">
+            <Button type="button">
                <svg width= '32px' height='32px'>
                  <use xlinkHref={sprite + '#icon-Shower'} />
                </svg>
                <p>Shower/WC</p>
-            </button>
-        </div>
+            </Button>
+        </ContainerButton>
 
-        <h3>Vehicle type</h3>
+        <Tittle>Vehicle type</Tittle>
         
-        <div>
-            <button type="button">
+        <ContainerButton>
+            <Button type="button">
               <svg width= '40px' height='28px'>
                  <use xlinkHref={sprite + '#icon-Button-three'} />
               </svg>
               <p>Van</p>
-            </button>
+            </Button>
 
-            <button type="button">
+            <Button type="button">
               <svg width= '40px' height='28px'>
                  <use xlinkHref={sprite + '#icon-Buttontwo'} />
               </svg>
               <p>Fully Integrated</p>
-            </button>
+            </Button>
 
-            <button type="button">
+            <Button type="button">
               <svg width= '40px' height='28px'>
                  <use xlinkHref={sprite + '#icon-camper'} />
               </svg>
               <p>Alcove</p>
-            </button>
-        </div>
+            </Button>
+        </ContainerButton>
 
-        <button type='button'>Search</button>
+        <ButtonSearch type='button'>Search</ButtonSearch>
 
       </div>
 
@@ -91,6 +92,6 @@ export const Catalog = () => {
       ))}
       </ul>
  
-      </>
+      </ContainerCatalog>
     );
   }; 
