@@ -69,14 +69,14 @@ export const Catalog = () => {
 
             <Button type="button">
               <svg width= '40px' height='28px'>
-                 <use xlinkHref={sprite + '#icon-Buttontwo'} />
+                 <use xlinkHref={sprite + '#icon-Button5'} />
               </svg>
               <p>Fully Integrated</p>
             </Button>
 
             <Button type="button">
               <svg width= '40px' height='28px'>
-                 <use xlinkHref={sprite + '#icon-camper'} />
+                 <use xlinkHref={sprite + '#icon-Button4'} />
               </svg>
               <p>Alcove</p>
             </Button>
@@ -95,3 +95,5 @@ export const Catalog = () => {
       </ContainerCatalog>
     );
   }; 
+
+  // onClick = {()=>ShowMoreButton(contact.camper._id)}

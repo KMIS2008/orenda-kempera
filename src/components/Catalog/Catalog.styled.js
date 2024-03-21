@@ -43,8 +43,8 @@ export const Button = styled.button`
   width: 95px;
   height: 95px;
   
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+ 
   letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.black};
 

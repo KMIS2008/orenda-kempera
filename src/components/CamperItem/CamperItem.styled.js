@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerItem = styled.li`
 display: flex;
-margin-bottom: ${p=>p.theme.spacing(6)};
+margin-bottom: ${p=>p.theme.spacing(5)};
 gap: 24px;
 padding: 24px;
 width: 840px;
