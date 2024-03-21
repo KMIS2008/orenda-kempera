@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/orenda-kempera/static/css/main.cd2e038f.css",
-    "main.js": "/orenda-kempera/static/js/main.41c18607.js",
-    "static/js/950.3f1828b4.chunk.js": "/orenda-kempera/static/js/950.3f1828b4.chunk.js",
+    "main.js": "/orenda-kempera/static/js/main.e318d332.js",
+    "static/js/950.0192ea0e.chunk.js": "/orenda-kempera/static/js/950.0192ea0e.chunk.js",
     "static/js/331.651a26bf.chunk.js": "/orenda-kempera/static/js/331.651a26bf.chunk.js",
-    "static/js/845.ac6778b7.chunk.js": "/orenda-kempera/static/js/845.ac6778b7.chunk.js",
-    "static/js/471.7cd3a2ee.chunk.js": "/orenda-kempera/static/js/471.7cd3a2ee.chunk.js",
+    "static/js/344.49c2dfa4.chunk.js": "/orenda-kempera/static/js/344.49c2dfa4.chunk.js",
+    "static/js/471.54e81228.chunk.js": "/orenda-kempera/static/js/471.54e81228.chunk.js",
     "static/media/istockphoto.jpg": "/orenda-kempera/static/media/istockphoto.2b2bf1403710312fefab.jpg",
+    "static/media/sprite.svg": "/orenda-kempera/static/media/sprite.44822fe297dfcbcd5e68578aa30356d0.svg",
     "index.html": "/orenda-kempera/index.html",
     "main.cd2e038f.css.map": "/orenda-kempera/static/css/main.cd2e038f.css.map",
-    "main.41c18607.js.map": "/orenda-kempera/static/js/main.41c18607.js.map",
-    "950.3f1828b4.chunk.js.map": "/orenda-kempera/static/js/950.3f1828b4.chunk.js.map",
+    "main.e318d332.js.map": "/orenda-kempera/static/js/main.e318d332.js.map",
+    "950.0192ea0e.chunk.js.map": "/orenda-kempera/static/js/950.0192ea0e.chunk.js.map",
     "331.651a26bf.chunk.js.map": "/orenda-kempera/static/js/331.651a26bf.chunk.js.map",
-    "845.ac6778b7.chunk.js.map": "/orenda-kempera/static/js/845.ac6778b7.chunk.js.map",
-    "471.7cd3a2ee.chunk.js.map": "/orenda-kempera/static/js/471.7cd3a2ee.chunk.js.map"
+    "344.49c2dfa4.chunk.js.map": "/orenda-kempera/static/js/344.49c2dfa4.chunk.js.map",
+    "471.54e81228.chunk.js.map": "/orenda-kempera/static/js/471.54e81228.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.41c18607.js"
+    "static/js/main.e318d332.js"
   ]
 }

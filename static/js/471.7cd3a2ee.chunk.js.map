@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/471.7cd3a2ee.chunk.js","mappings":"8KAAe,SAASA,IACpB,OACIC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAGR,C","sources":["Pages/FavoritePage/FavoritePage.js"],"sourcesContent":["export default function FavoritePage (){\n    return(\n        <>\n        </>\n    )\n}"],"names":["FavoritePage","_jsx","_Fragment"],"sourceRoot":""}
