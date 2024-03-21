@@ -1,15 +1,34 @@
 import sprite from '../../assets/sprite.svg';
 
-export const CamperItem = ({data}) => {
+export const CamperItem = ({value}) => {
+    const {
+        adults,
+        // children,
+        // consumption,
+        description,
+        // engine,
+        // form,
+        // height,
+        // length,
+        location,
+        name,
+        price,
+        rating,
+        // tank,
+        // transmission,
+        // width,
+        details,
+        gallery,
+        reviews,
+      } = value;
+
+
     return (
-     
-        <ul>
-             {data.map((camper)=>{
-                return (
-                    <li key={camper._id}>
-                        <img src={camper.img} alt="camper"></img>
-                        <h2>{camper.name}</h2>
-                        <p>€{camper.price}
+        <>
+                    <li>
+                        <img src={gallery[0]} alt={name}></img>
+                        <h2>{name}</h2>
+                        <p>€{price}.00
                         <span>          
                              <svg width= '24px' height='24px'>
                                <use xlinkHref={sprite + '#icon-Hartdefault'} />
@@ -22,20 +41,22 @@ export const CamperItem = ({data}) => {
                                <use xlinkHref={sprite + '#icon-star'} />
                              </svg>
                            </span> 
-                            {camper.rating} ( Reviews)
+                            {rating} ({reviews.length} Rewiews)
                            <span>          
                              <svg width= '16px' height='16px'>
                                <use xlinkHref={sprite + '#icon-map-pin'} />
                              </svg>
                            </span> 
-                           {camper.location}
+                           {location}
                         </p>
+
+                        <p>{description}</p>
 
                         <button type="button">
                              <svg width= '20px' height='20px'>
                                 <use xlinkHref={sprite + '#icon-Users'} />
                              </svg>
-                             <p>{camper.adults} adults</p>
+                             <p>{adults} adults</p>
                         </button>
 
                         <button type="button">
@@ -63,7 +84,7 @@ export const CamperItem = ({data}) => {
                              <svg width= '20px' height='20px'>
                                 <use xlinkHref={sprite + '#icon-bad'} />
                              </svg>
-                             <p>{camper.details.beds}beds</p>
+                             <p>{details.beds}beds</p>
                         </button>
 
                         <button type="button">
@@ -74,12 +95,8 @@ export const CamperItem = ({data}) => {
                         </button>
 
               <button type='button' >Show more</button>
-                    </li>
-
-                )    
-            })}   
-        </ul>
-
+                    </li>        
+        </>
     );
   }; 
   
