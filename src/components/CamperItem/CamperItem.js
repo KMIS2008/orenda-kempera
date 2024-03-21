@@ -1,6 +1,6 @@
 import sprite from '../../assets/sprite.svg';
 import {ContainerItem, Image, Title, Header, Price, LocalRewiew, Reviews, Location, Description, ListButton, ButtonLi, 
-    ButtonMore, Button} from './CamperItem.styled'
+    ButtonMore} from './CamperItem.styled'
 
 export const CamperItem = ({value}) => {
     const {
@@ -68,52 +68,52 @@ export const CamperItem = ({value}) => {
 
                         <ListButton>
                             <ButtonLi>
-                              <Button type="button">
+                             
                                 <svg width= '20px' height='20px'>
                                   <use xlinkHref={sprite + '#icon-Users'} />
                                 </svg>
                                 <p>{adults} adults</p>
-                              </Button>     
+                              
                             </ButtonLi>
                             <ButtonLi>
-                              <Button type="button">
+                              
                                 <svg width= '20px' height='20px'>
                                   <use xlinkHref={sprite + '#icon-Container'} />
                                 </svg>
                                 <p>Automatic</p>
-                              </Button>
+                            
                             </ButtonLi>
                             <ButtonLi>
-                              <Button type="button">
+                             
                                 <svg width= '20px' height='20px'>
                                   <use xlinkHref={sprite + '#icon-Vertical-container'} />
                                 </svg>
                                 <p>Petrol</p>
-                              </Button>                                
+                           
                             </ButtonLi>
                             <ButtonLi>
-                              <Button type="button">
+                           
                                 <svg width= '20px' height='20px'>
                                   <use xlinkHref={sprite + '#icon-eat'} />
                                 </svg>
                                 <p>Kitchen</p>
-                              </Button>                                
+                            
                             </ButtonLi>
                             <ButtonLi>
-                              <Button type="button">
+                            
                                 <svg width= '20px' height='20px'>
                                    <use xlinkHref={sprite + '#icon-bad'} />
                                 </svg>
                                 <p>{details.beds}beds</p>
-                              </Button>                                
+                            
                             </ButtonLi>
                             <ButtonLi>
-                              <Button type="button">
+                            
                                 <svg width= '20px' height='20px'>
                                    <use xlinkHref={sprite + '#icon-Vector'} />
                                 </svg>
                                 <p>AC</p>
-                              </Button>                                
+                             
                             </ButtonLi>
                         </ListButton>
 

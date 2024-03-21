@@ -76,9 +76,7 @@ gap: 8px;
 export const ButtonLi = styled.li`
 list-style-type: none;
 margin-bottom: 10px;
-`;
 
-export const Button = styled.button`
   display: flex;
   padding: 12px 18px;  
   
