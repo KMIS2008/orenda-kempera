@@ -1,17 +1,18 @@
 import { useSelector } from 'react-redux';
+import {useState } from 'react';
 import sprite from '../../assets/sprite.svg';
 import {selectCampers} from '../../redux/selectors';
 import {CamperItem} from '../CamperItem/CamperItem';
 import { ContainerCatalog, Label, Input, Text, Tittle, Button, ContainerButton, ButtonSearch, LoadMoreButton} from './Catalog.styled';
 
-// const [visibleCampersCount, setVisibleCampersCount] = useState(4);
-// const handleLoadMore = () => {
-//   setVisibleCampersCount(prevCount => Math.min(prevCount + campers.length));
-// };
 
 export const Catalog = () => {
 
   const campers = useSelector(selectCampers);
+  const [CampersCount, setCampersCount] = useState(4);
+  const handleLoadMore = () => {
+    setCampersCount(prevCount => Math.min(prevCount + 4));
+  };
 
     return (
       <div>
@@ -94,16 +95,20 @@ export const Catalog = () => {
       </div>
 
       <ul>
-      {campers.map((item) => (
+      {campers.slice(0, CampersCount).map((item) => (
         <CamperItem key={item._id} value={item} />
       ))}
       </ul>
 
       </ContainerCatalog>
 
-        <LoadMoreButton type='button'>Load more</LoadMoreButton>
+      {CampersCount < campers.length && (
+       
+       <LoadMoreButton type='button'  onClick={handleLoadMore}>Load more</LoadMoreButton>
+      )}
 
       </div>
     );
   }; 
+
 
