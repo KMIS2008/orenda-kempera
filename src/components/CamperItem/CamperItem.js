@@ -1,29 +1,23 @@
 import sprite from '../../assets/sprite.svg';
 import {ContainerItem, Image, Title, Header, Price, LocalRewiew, Reviews, Location, Description, ListButton, ButtonLi, 
-    ButtonMore} from './CamperItem.styled'
+    ButtonMore, Svg} from './CamperItem.styled'
+import { useState } from "react";
+import {ModalShow} from '../Modal/ModalShow';
 
 export const CamperItem = ({value}) => {
     const {
         adults,
-        // children,
-        // consumption,
         // description,
-        // engine,
-        // form,
-        // height,
-        // length,
         location,
         name,
         price,
         rating,
-        // tank,
-        // transmission,
-        // width,
         details,
         gallery,
         reviews,
       } = value;
 
+      const [isOpenModal, setIsOpenModal] = useState(false);
 
     return (
         <>
@@ -34,15 +28,15 @@ export const CamperItem = ({value}) => {
                                  <Title>{name}</Title>
                                 <Price>€{price}.00
                                   <span>          
-                                    <svg width= '24px' height='24px'>
+                                    <Svg width= '24px' height='24px'>
                                       <use xlinkHref={sprite + '#icon-Hartdefault'} />
-                                    </svg>
+                                    </Svg>
                                   </span> 
                                 </Price>
                             </Header>
 
                         <LocalRewiew>
-                        <p>
+                        <div>
                              <svg width= '16px' height='16px'>
                                <use xlinkHref={sprite + '#icon-star'} />
                              </svg>                       
@@ -50,9 +44,9 @@ export const CamperItem = ({value}) => {
                              {rating} ({reviews.length} Rewiews)
                            </Reviews> 
                             
-                        </p>
+                        </div>
 
-                        <p>
+                        <div>
                             <svg width= '16px' height='16px'>
                                <use xlinkHref={sprite + '#icon-map-pin'} />
                             </svg>
@@ -60,7 +54,7 @@ export const CamperItem = ({value}) => {
                            <Location>  
                              {location}           
                            </Location>                     
-                        </p>
+                        </div>
 
                         </LocalRewiew>    
 
@@ -117,13 +111,16 @@ export const CamperItem = ({value}) => {
                             </ButtonLi>
                         </ListButton>
 
-              <ButtonMore type='button' >Show more</ButtonMore>
+              <ButtonMore type='button' onClick={() => {
+              setIsOpenModal(true);
+            }}>Show more</ButtonMore>
 
                         </div>
 
-                    </ContainerItem>        
+                    </ContainerItem> 
+                    <ModalShow isModalOpen={isOpenModal} setIsOpen={setIsOpenModal} data={value} />       
         </>
     );
   }; 
   
-//   onClick = {()=>ShowMoreButton(contact.camper._id)}
+ 

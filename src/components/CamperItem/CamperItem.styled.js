@@ -113,3 +113,11 @@ export const ButtonMore = styled.button`
   }
 `;
 
+export const Svg = styled.svg`
+ 
+
+  &:hover,
+  :focus {
+    fill:#E44848;
+  }
+`;
