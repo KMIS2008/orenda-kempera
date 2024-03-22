@@ -5,7 +5,8 @@ import Modal from "react-modal";
 import sprite from '../../assets/sprite.svg';
 
 import {Title, TitleFlex, Info, Reviews, Location, Price, GamperList, 
-       GamperItem, GamperImg, Description, ButtonClose, Buttons, ListButton, ButtonLi, TitleFeatures, FeaturesContainer, LocationReviews } from "./ModalShow.styled";
+       GamperItem, GamperImg, Description, ButtonClose, Buttons, ListButton, ButtonLi, TitleFeatures, 
+       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil, TextBook } from "./ModalShow.styled";
 import { nanoid } from 'nanoid';
 Modal.setAppElement('#modal');
 
@@ -101,8 +102,10 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
           <Buttons type="button">Reviews</Buttons>
       </div>
 
-      <div>
-        <div>
+
+
+      <FormaFlex>
+        <ContainerDateil>
            <ListButton>
               <ButtonLi>
                         
@@ -165,7 +168,7 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-cd'} />
                 </svg>
-                <p>{details.CD} CD</p>
+                <p> CD</p>
                                         
               </ButtonLi>
               <ButtonLi>
@@ -173,9 +176,17 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-radio'} />
                 </svg>
-                <p>{details.radio} Radio</p>
+                <p> Radio</p>
                                         
-              </ButtonLi>              
+              </ButtonLi>        
+              <ButtonLi>
+                            
+                <svg width= '20px' height='20px'>
+                  <use xlinkHref={sprite + '#icon-paintedplate'} />
+                </svg>
+                <p>{details.hob} hob</p>
+                                        
+              </ButtonLi>                    
           </ListButton>
           <TitleFeatures>Vehicle details</TitleFeatures>
           <div>
@@ -204,10 +215,17 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
               <p>{consumption}</p>
             </FeaturesContainer>            
           </div>
-        </div>
+        </ContainerDateil>
 
 
-      </div>
+          
+        <FormaBook>
+          <Title>Book your campervan now</Title>
+          <TextBook>Stay connected! We are always ready to help you.</TextBook>
+
+        </FormaBook>
+
+      </FormaFlex>
 
       </Modal>
       

@@ -132,4 +132,26 @@ font-size: 24px;
 line-height: 1.25;
 `;
 
+export const FormaFlex = styled.div`
+display: flex;
+`;
 
+export const ContainerDateil= styled.div`
+padding: 10px;
+width: 450px;
+`;
+
+
+export const FormaBook = styled.div`
+padding: 10px;
+width: 450px;
+border-radius: 10px;
+border: solid 1px ${p=>p.theme.colors.beige};
+`;
+
+export const TextBook = styled.p` 
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.grey};
+`;
