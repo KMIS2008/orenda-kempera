@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/orenda-kempera/static/css/main.cd2e038f.css",
-    "main.js": "/orenda-kempera/static/js/main.e4d2ea54.js",
+    "main.js": "/orenda-kempera/static/js/main.67a99947.js",
     "static/js/950.501e3692.chunk.js": "/orenda-kempera/static/js/950.501e3692.chunk.js",
     "static/js/331.d6d486ac.chunk.js": "/orenda-kempera/static/js/331.d6d486ac.chunk.js",
-    "static/js/724.9cabb3c9.chunk.js": "/orenda-kempera/static/js/724.9cabb3c9.chunk.js",
+    "static/js/724.6aafa713.chunk.js": "/orenda-kempera/static/js/724.6aafa713.chunk.js",
     "static/js/471.e8fe9588.chunk.js": "/orenda-kempera/static/js/471.e8fe9588.chunk.js",
     "static/js/522.76eb09d5.chunk.js": "/orenda-kempera/static/js/522.76eb09d5.chunk.js",
     "static/media/istockphoto.jpg": "/orenda-kempera/static/media/istockphoto.2b2bf1403710312fefab.jpg",
     "static/media/sprite.svg": "/orenda-kempera/static/media/sprite.ed8d22353ef128d9c075b481814332b9.svg",
     "index.html": "/orenda-kempera/index.html",
     "main.cd2e038f.css.map": "/orenda-kempera/static/css/main.cd2e038f.css.map",
-    "main.e4d2ea54.js.map": "/orenda-kempera/static/js/main.e4d2ea54.js.map",
+    "main.67a99947.js.map": "/orenda-kempera/static/js/main.67a99947.js.map",
     "950.501e3692.chunk.js.map": "/orenda-kempera/static/js/950.501e3692.chunk.js.map",
     "331.d6d486ac.chunk.js.map": "/orenda-kempera/static/js/331.d6d486ac.chunk.js.map",
-    "724.9cabb3c9.chunk.js.map": "/orenda-kempera/static/js/724.9cabb3c9.chunk.js.map",
+    "724.6aafa713.chunk.js.map": "/orenda-kempera/static/js/724.6aafa713.chunk.js.map",
     "471.e8fe9588.chunk.js.map": "/orenda-kempera/static/js/471.e8fe9588.chunk.js.map",
     "522.76eb09d5.chunk.js.map": "/orenda-kempera/static/js/522.76eb09d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.e4d2ea54.js"
+    "static/js/main.67a99947.js"
   ]
 }
