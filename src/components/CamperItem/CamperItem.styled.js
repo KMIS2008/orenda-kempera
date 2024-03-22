@@ -115,9 +115,9 @@ export const ButtonMore = styled.button`
 
 export const Svg = styled.svg`
  
-
   &:hover,
   :focus {
-    fill:#E44848;
+    fill:"#e44848";
+    stroke: "#e44848";
   }
 `;

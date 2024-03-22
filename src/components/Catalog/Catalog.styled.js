@@ -88,3 +88,24 @@ export const ButtonSearch = styled.button`
   }
 `;
 
+export const LoadMoreButton = styled.div`
+  margin: 0 auto;
+  padding: 16px 40px;  
+  width: 166px;
+  height: 56px;
+  
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+
+  border-radius: 200px;
+
+border: solid 1px ${p=>p.theme.colors.beige};
+text-align: center;
+&:hover,
+  :focus {
+    border: solid 1px ${p=>p.theme.colors.red};
+  }
+`;
+
