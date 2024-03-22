@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import sprite from '../../assets/sprite.svg';
 
 import {Title, TitleFlex, Info, Reviews, Location, Price, GamperList, 
-       GamperItem, GamperImg, } from "./ModalShow.styled";
+       GamperItem, GamperImg, Description, ButtonClose, Buttons } from "./ModalShow.styled";
 import { nanoid } from 'nanoid';
 Modal.setAppElement('#modal');
 
@@ -51,14 +51,14 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
 
          <Title>{name}</Title>
 
-         <button
+         <ButtonClose
            onClick={() => {
             setIsOpen(false);
            }}>
             <svg width= '32px' height='32px'>
                 <use xlinkHref={sprite + '#icon-Rating'} />
             </svg> 
-         </button>
+         </ButtonClose>
 
       </TitleFlex>
 
@@ -93,12 +93,14 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
             ))}
       </GamperList>
 
-      <p>{description}</p>
+      <Description>{description}</Description>
 
       <div>
-          <button type="button">Features</button>
-          <button type="button">Reviews</button>
+          <Buttons type="button">Features</Buttons>
+          <Buttons type="button">Reviews</Buttons>
       </div>
+
+      
 
       </Modal>
       

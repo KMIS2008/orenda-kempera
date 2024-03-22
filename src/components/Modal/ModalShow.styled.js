@@ -51,20 +51,38 @@ export const GamperList = styled.ul`
 `;
 
 export const GamperItem = styled.li`
+  list-style-type: none;
   width: 290px;
   height: 310px;
 `;
 
 export const GamperImg = styled.img`
   border-radius: 10px;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 `;
 
-export const Description = styled.p`
-  margin-bottom: 24px;
+export const Description = styled.p` 
+  margin-bottom: 30px;
+  text-align: justify;
   font-size: 16px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.grey};
+`;
+
+export const ButtonClose = styled.button` 
+border-color: transparent;
+`;
+
+export const Buttons = styled.button` 
+margin-right: 20px;
+border-color: transparent;
+
+&:hover,
+  :focus {
+    border-bottom-color: ${p=>p.theme.colors.red};
+  }
 `;
 
 
