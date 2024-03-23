@@ -2,7 +2,9 @@ import sprite from '../../assets/sprite.svg';
 import {ContainerItem, Image, Title, Header, Price, LocalRewiew, Reviews, Location, Description, ListButton, ButtonLi, 
     ButtonMore, Svg} from './CamperItem.styled'
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import {ModalShow} from '../Modal/ModalShow';
+import{addFavorite} from '../../redux/catalogSlice';
 
 export const CamperItem = ({value}) => {
     const {
@@ -18,6 +20,7 @@ export const CamperItem = ({value}) => {
       } = value;
 
       const [isOpenModal, setIsOpenModal] = useState(false);
+      const dispatch = useDispatch();
 
     return (
         <>
@@ -26,7 +29,9 @@ export const CamperItem = ({value}) => {
                         <div>
                             <Header>
                                  <Title>{name}</Title>
-                                <Price>€{price}.00
+                                <Price 
+                                onClick={()=>{dispatch(addFavorite(value))}}
+                                >€{price}.00
                                   <span>          
                                     <Svg width= '24px' height='24px'>
                                       <use xlinkHref={sprite + '#icon-Hartdefault'} />

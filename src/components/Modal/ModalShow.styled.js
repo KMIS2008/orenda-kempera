@@ -158,5 +158,42 @@ export const TextBook = styled.p`
 
 export const ReweiwsList = styled.ul`
   margin-bottom: 24px;
-
 `;
+
+export const ReweiwsName = styled.div`
+  padding:14px;
+  width: 60px;
+  height: 60px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align:center;
+  color: ${p=>p.theme.colors.red};
+  background-color: ${p=>p.theme.colors.beige};
+  border-radius: 50%;
+`;
+
+export const ReweiwsNameRating = styled.div`
+display: flex;
+margin-bottom: 16px;
+gap:16px;
+`;
+
+export const NameRating = styled.div`
+padding: 10px;
+display: block;
+`;
+
+export const TitleName = styled.div`
+font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+`;
+
+export const Comment = styled.p`
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.grey};
+`;
+

@@ -7,6 +7,16 @@ const catalogSlice = createSlice({
       items: [],
       isLoading: false,
       error: null,
+      isFavorite: [],
+    },
+    reducers: {
+      addFavorite(state, action) {
+        const newItem = action.payload;
+        state.isFavorite.push(newItem);
+      },
+      removeFavorite(state, action) {
+        state.isFavorite = state.isFavorite.filter((item) => item._id !== action.payload);
+      },
     },
     extraReducers: (builder) => {
       builder
@@ -26,3 +36,4 @@ const catalogSlice = createSlice({
   });
   
   export const catalogReducer = catalogSlice.reducer;
+  export const { addFavorite, removeFavorite } = catalogSlice.actions;

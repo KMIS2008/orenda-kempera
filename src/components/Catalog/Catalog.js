@@ -14,6 +14,7 @@ export const Catalog = () => {
     setCampersCount(prevCount => Math.min(prevCount + 4));
   };
 
+
     return (
       <div>
 

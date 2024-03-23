@@ -9,10 +9,10 @@ import sprite from '../../assets/sprite.svg';
 
 import {Title, TitleFlex, Info, Reviews, Location, Price, GamperList, 
        GamperItem, GamperImg, Description, ButtonClose, Buttons, ListButton, ButtonLi, TitleFeatures, 
-       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil, ReweiwsList } from "./ModalShow.styled";
+       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil, ReweiwsList,
+       ReweiwsName, ReweiwsNameRating, NameRating, TitleName, Comment} from "./ModalShow.styled";
 import { nanoid } from 'nanoid';
 Modal.setAppElement('#modal');
-
 
 
 export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
@@ -28,7 +28,6 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
     setIsButtonFeaturesClicked(false);
     setIsButtonReviewsClicked(true);
   };
-
   
  const { name, price, rating, reviews, description, gallery, location, adults, 
         details, form, length, width, height, tank, consumption } = data;
@@ -41,8 +40,6 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
               <use xlinkHref={sprite + '#icon-Rating'} />
             </svg>
               ));
-
-         
         };
 
   const customStyles = {
@@ -135,84 +132,74 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
         <ContainerDateil>
            <ListButton>
               <ButtonLi>
-                        
                 <svg width= '20px' height='20px'>
                    <use xlinkHref={sprite + '#icon-Users'} />
                 </svg>
                 <p>{adults} adults</p>
-                              
               </ButtonLi>
+
               <ButtonLi>
-                              
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-Container'} />
                 </svg>
                 <p>Automatic</p>
-                            
               </ButtonLi>
+
               <ButtonLi>
-                             
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-Vertical-container'} />
                 </svg>
                 <p>Petrol</p>
-                           
               </ButtonLi>
+
               <ButtonLi>
-                            
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-Vector'} />
                 </svg>
-                <p>AC</p>
-                             
-              </ButtonLi>             
-               <ButtonLi>
-                           
+                <p>AC</p>                            
+              </ButtonLi>   
+
+               <ButtonLi>          
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-eat'} />
                 </svg>
                 <p>Kitchen</p>
-                            
               </ButtonLi>
+
               <ButtonLi>
-                            
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-bad'} />
                 </svg>
                 <p>{details.beds}beds</p>
-                            
               </ButtonLi>
+
               <ButtonLi>
-                            
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-air-conditioner'} />
                 </svg>
-                <p>{details.airConditioner} air conditioner</p>
-                                        
+                <p>{details.airConditioner} air conditioner</p>                                        
               </ButtonLi>
-              <ButtonLi>
-                            
+
+              <ButtonLi>                            
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-cd'} />
                 </svg>
                 <p> CD</p>
                                         
               </ButtonLi>
-              <ButtonLi>
-                            
+
+              <ButtonLi>                            
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-radio'} />
                 </svg>
-                <p> Radio</p>
-                                        
-              </ButtonLi>        
-              <ButtonLi>
-                            
+                <p> Radio</p>                                       
+              </ButtonLi>   
+
+              <ButtonLi>                           
                 <svg width= '20px' height='20px'>
                   <use xlinkHref={sprite + '#icon-paintedplate'} />
                 </svg>
-                <p>{details.hob} hob</p>
-                                        
+                <p>{details.hob} hob</p>                                        
               </ButtonLi>                    
           </ListButton>
           <TitleFeatures>Vehicle details</TitleFeatures>
@@ -243,24 +230,29 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
             </FeaturesContainer>            
           </div>
         </ContainerDateil>
-
-
           
         <FormaBook>
-         
           <BookForm/>
         </FormaBook>
 
       </FormaFlex>
       )}
+
  {!isButtonFeaturesClicked && isButtonReviewsClicked && (
      <FormaFlex>
         <ContainerDateil>
         {reviews.map((item) => (
               <ReweiwsList key={nanoid()}>
-                <h3>{item.reviewer_name}</h3>
-                {renderRatingIcons(item.reviewer_rating)}
-                <p>{item.comment}</p>
+
+                <ReweiwsNameRating>
+                    <ReweiwsName>{item.reviewer_name.charAt(0)}</ReweiwsName>
+                    <NameRating>
+                       <TitleName>{item.reviewer_name}</TitleName>
+                       {renderRatingIcons(item.reviewer_rating)}
+                    </NameRating>
+                </ReweiwsNameRating>
+
+                <Comment>{item.comment}</Comment>
               </ReweiwsList>
             ))}
            
