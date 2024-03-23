@@ -14,6 +14,7 @@ const theme = {
     yellow:'#FFC531',
     beige:'#F2F4F7',
     white:'#F7F7F7',
+    hover:'#d84343',
   },
 
   spacing: value => `${value * 5}px`,

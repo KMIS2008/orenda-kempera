@@ -1,6 +1,7 @@
 import Modal from "react-modal";
 import { useState } from "react";
-import Book from '../Book/Book'
+
+import BookForm from '../Book/BookForm';
 
 // import styles from "./ModalShow.module.css";
 
@@ -8,7 +9,7 @@ import sprite from '../../assets/sprite.svg';
 
 import {Title, TitleFlex, Info, Reviews, Location, Price, GamperList, 
        GamperItem, GamperImg, Description, ButtonClose, Buttons, ListButton, ButtonLi, TitleFeatures, 
-       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil } from "./ModalShow.styled";
+       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil, ReweiwsList } from "./ModalShow.styled";
 import { nanoid } from 'nanoid';
 Modal.setAppElement('#modal');
 
@@ -32,6 +33,17 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
  const { name, price, rating, reviews, description, gallery, location, adults, 
         details, form, length, width, height, tank, consumption } = data;
 
+        const renderRatingIcons = ({rating}) => {
+          const ratingValue = parseInt(rating);
+
+           Array.from({ length: ratingValue }, (_, index) => (
+            <svg key={index} width="32px" height="32px">
+              <use xlinkHref={sprite + '#icon-Rating'} />
+            </svg>
+              ));
+
+         
+        };
 
   const customStyles = {
     overlay: {
@@ -235,7 +247,8 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
 
           
         <FormaBook>
-          <Book/>
+         
+          <BookForm/>
         </FormaBook>
 
       </FormaFlex>
@@ -243,12 +256,18 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
  {!isButtonFeaturesClicked && isButtonReviewsClicked && (
      <FormaFlex>
         <ContainerDateil>
-
+        {reviews.map((item) => (
+              <ReweiwsList key={nanoid()}>
+                <h3>{item.reviewer_name}</h3>
+                {renderRatingIcons(item.reviewer_rating)}
+                <p>{item.comment}</p>
+              </ReweiwsList>
+            ))}
+           
         </ContainerDateil>
 
      <FormaBook>
-
-        <Book/>
+         <BookForm/>
      </FormaBook>
    </FormaFlex>
 

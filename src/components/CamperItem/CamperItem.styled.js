@@ -109,7 +109,7 @@ export const ButtonMore = styled.button`
 
   &:hover,
   :focus {
-    background-color: #d84343;
+    background-color: ${(p) => p.theme.colors.hover};
   }
 `;
 

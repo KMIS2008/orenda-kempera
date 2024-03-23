@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { Field, Form, FormSubtitle, FormTitle, ButtonSubmit, Textarea } from "./BookForm.styled";
 
 const SignupSchema = Yup.object().shape({
     name: Yup.string()
@@ -10,7 +11,54 @@ const SignupSchema = Yup.object().shape({
     date: Yup.date().required('Required'),
   });
 
+   const BookForm = () => {
+    return (
+      <>
+        <div>
+          <Formik
+            initialValues={{
+              name: "",
+              date: "",
+              email: "",
+              message: "",
+            }}
 
+            validationSchema = {SignupSchema}
+
+            onSubmit={(values, actions) => {            
+            console.log(values);
+            actions.resetForm();}
+            }>
+
+
+            <Form>
+
+              <FormTitle>Book your campervan now</FormTitle>
+              <FormSubtitle>
+                Stay connected! We are always ready to help you.
+              </FormSubtitle>
+
+              <Field name="name" placeholder="Name" type="text"  />
+  
+              <Field name="email" placeholder="Email" type="email" />
+  
+              <Field
+                name="date"
+                placeholder="Booking date"
+              />
+
+              <Textarea name="message" as="textarea" placeholder="Comment" />
+
+              <ButtonSubmit type="submit">Send</ButtonSubmit>
+              
+            </Form>
+          </Formik>
+        </div>
+      </>
+    );
+  };
+
+  export default BookForm;
 
 //   export const FormAddContact = ()=> {
 //     const contacts = useSelector(selectContacts);

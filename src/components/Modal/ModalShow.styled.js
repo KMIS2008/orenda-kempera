@@ -155,3 +155,8 @@ export const TextBook = styled.p`
   line-height: 1.5;
   color: ${(p) => p.theme.colors.grey};
 `;
+
+export const ReweiwsList = styled.ul`
+  margin-bottom: 24px;
+
+`;
