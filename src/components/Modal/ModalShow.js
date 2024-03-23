@@ -1,4 +1,6 @@
 import Modal from "react-modal";
+import { useState } from "react";
+import Book from '../Book/Book'
 
 // import styles from "./ModalShow.module.css";
 
@@ -6,7 +8,7 @@ import sprite from '../../assets/sprite.svg';
 
 import {Title, TitleFlex, Info, Reviews, Location, Price, GamperList, 
        GamperItem, GamperImg, Description, ButtonClose, Buttons, ListButton, ButtonLi, TitleFeatures, 
-       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil, TextBook } from "./ModalShow.styled";
+       FeaturesContainer, LocationReviews, FormaBook, FormaFlex, ContainerDateil } from "./ModalShow.styled";
 import { nanoid } from 'nanoid';
 Modal.setAppElement('#modal');
 
@@ -14,6 +16,19 @@ Modal.setAppElement('#modal');
 
 export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
 
+  const [isButtonFeaturesClicked, setIsButtonFeaturesClicked] = useState(false);
+  const [isButtonReviewsClicked, setIsButtonReviewsClicked] = useState(false);
+  const handleFeaturesClick = () => {
+    setIsButtonFeaturesClicked(true);
+    setIsButtonReviewsClicked(false);
+  };
+
+  const handleReviewsClick = () => {
+    setIsButtonFeaturesClicked(false);
+    setIsButtonReviewsClicked(true);
+  };
+
+  
  const { name, price, rating, reviews, description, gallery, location, adults, 
         details, form, length, width, height, tank, consumption } = data;
 
@@ -98,13 +113,13 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
       <Description>{description}</Description>
 
       <div>
-          <Buttons type="button">Features</Buttons>
-          <Buttons type="button">Reviews</Buttons>
+          <Buttons type="button" onClick={handleFeaturesClick}>Features</Buttons>
+          <Buttons type="button" onClick={handleReviewsClick}>Reviews</Buttons>
       </div>
 
-
-
-      <FormaFlex>
+      {isButtonFeaturesClicked && !isButtonReviewsClicked && (
+        
+    <FormaFlex>
         <ContainerDateil>
            <ListButton>
               <ButtonLi>
@@ -220,13 +235,26 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
 
           
         <FormaBook>
-          <Title>Book your campervan now</Title>
-          <TextBook>Stay connected! We are always ready to help you.</TextBook>
-
+          <Book/>
         </FormaBook>
 
       </FormaFlex>
+      )}
+ {!isButtonFeaturesClicked && isButtonReviewsClicked && (
+     <FormaFlex>
+        <ContainerDateil>
 
+        </ContainerDateil>
+
+     <FormaBook>
+
+        <Book/>
+     </FormaBook>
+   </FormaFlex>
+
+ )}
+      
+     
       </Modal>
       
 
