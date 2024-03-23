@@ -1,25 +1,27 @@
 {
   "files": {
     "main.css": "/orenda-kempera/static/css/main.cd2e038f.css",
-    "main.js": "/orenda-kempera/static/js/main.04af532d.js",
+    "main.js": "/orenda-kempera/static/js/main.bbb9461c.js",
     "static/js/950.501e3692.chunk.js": "/orenda-kempera/static/js/950.501e3692.chunk.js",
     "static/js/331.d6d486ac.chunk.js": "/orenda-kempera/static/js/331.d6d486ac.chunk.js",
-    "static/js/447.9e2a9b18.chunk.js": "/orenda-kempera/static/js/447.9e2a9b18.chunk.js",
-    "static/js/471.e8fe9588.chunk.js": "/orenda-kempera/static/js/471.e8fe9588.chunk.js",
+    "static/js/35.fc896aba.chunk.js": "/orenda-kempera/static/js/35.fc896aba.chunk.js",
+    "static/js/470.b225b755.chunk.js": "/orenda-kempera/static/js/470.b225b755.chunk.js",
     "static/js/692.1c0b4d84.chunk.js": "/orenda-kempera/static/js/692.1c0b4d84.chunk.js",
+    "static/js/946.6136384d.chunk.js": "/orenda-kempera/static/js/946.6136384d.chunk.js",
     "static/media/istockphoto.jpg": "/orenda-kempera/static/media/istockphoto.2b2bf1403710312fefab.jpg",
     "static/media/sprite.svg": "/orenda-kempera/static/media/sprite.df9bfc800210593e20399ee7cf111b06.svg",
     "index.html": "/orenda-kempera/index.html",
     "main.cd2e038f.css.map": "/orenda-kempera/static/css/main.cd2e038f.css.map",
-    "main.04af532d.js.map": "/orenda-kempera/static/js/main.04af532d.js.map",
+    "main.bbb9461c.js.map": "/orenda-kempera/static/js/main.bbb9461c.js.map",
     "950.501e3692.chunk.js.map": "/orenda-kempera/static/js/950.501e3692.chunk.js.map",
     "331.d6d486ac.chunk.js.map": "/orenda-kempera/static/js/331.d6d486ac.chunk.js.map",
-    "447.9e2a9b18.chunk.js.map": "/orenda-kempera/static/js/447.9e2a9b18.chunk.js.map",
-    "471.e8fe9588.chunk.js.map": "/orenda-kempera/static/js/471.e8fe9588.chunk.js.map",
-    "692.1c0b4d84.chunk.js.map": "/orenda-kempera/static/js/692.1c0b4d84.chunk.js.map"
+    "35.fc896aba.chunk.js.map": "/orenda-kempera/static/js/35.fc896aba.chunk.js.map",
+    "470.b225b755.chunk.js.map": "/orenda-kempera/static/js/470.b225b755.chunk.js.map",
+    "692.1c0b4d84.chunk.js.map": "/orenda-kempera/static/js/692.1c0b4d84.chunk.js.map",
+    "946.6136384d.chunk.js.map": "/orenda-kempera/static/js/946.6136384d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.04af532d.js"
+    "static/js/main.bbb9461c.js"
   ]
 }
