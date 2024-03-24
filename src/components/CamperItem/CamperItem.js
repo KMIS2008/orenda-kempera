@@ -22,23 +22,21 @@ export const CamperItem = ({value}) => {
       } = value;
 
       const [isOpenModal, setIsOpenModal] = useState(false);
+      
       const dispatch = useDispatch();
 
       const favorites = useSelector(selectFavourite);
+      
+      const isFavorite = favorites.some((item) => item._id === value._id);
 
       const handleFavoriteClick = (value) => {
-        console.log(value)
         
-        const isFavorite = favorites.some((item) => item._id === value._id);
-      
         if (isFavorite) {
           dispatch(removeFavorite(value));
         } else {
 
           dispatch(addFavorite(value));
         }
-        console.log(favorites)
-        console.log(isFavorite)
       }
 
     return (
@@ -51,10 +49,17 @@ export const CamperItem = ({value}) => {
                                 <Price 
                                 onClick={() => handleFavoriteClick(value)}
                                 >€{price}.00
-                                  <span>          
-                                    <Svg width= '24px' height='24px'>
+                                  <span>     
+                                  {isFavorite ? 
+                                  <Svg width= '24px' height='24px'>
+                                  <use xlinkHref={sprite + '#icon-Hartpressed'} />
+                                </Svg> 
+                                   : 
+                                     <Svg width= '24px' height='24px'>
                                       <use xlinkHref={sprite + '#icon-Hartdefault'} />
-                                    </Svg>
+                                    </Svg>                                 
+                                  }     
+
                                   </span> 
                                 </Price>
                             </Header>

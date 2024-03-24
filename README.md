@@ -1,113 +1,65 @@
-# React homework template
+Camper is a contract for a company that provides services for renting campers in Ukraine. The drawer is folded on 3 sides.
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+Home page with a detailed description of the services the company provides.
 
-## Создание репозитория по шаблону
+On the other side there is a catalog of campers of various configurations that drivers can filter for the location of the same type.
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+The third side is to avenge the shock that they gave to the koristuvach in love.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+Every time you click on the button that looks like a “heart” on the shock card, you will be taken to the list of your favorites, and the color of the button will change.
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+When you click on the button next to the “heart” view again, the favorites will be removed from the list of favorites, and the color of the button will change to full size.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+Each time you click on the Show more button, a modal window with detailed information about the camera opens.
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+The modal window can be closed by clicking on the button that looks like a “cross”, by clicking on backdrop and pressing the Esc key.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+The modal window contains information about the features of the camper and its content.
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+The modal window also contains a form for making a reservation for a camper, which consists of the fields name, email, booking date and comment. The fields name, email, booking date are required until filled in and are checked for the validity of the entered values. (In the case of invalid data, the form is not submitted; in the case of a valid form, the page is updated).
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+For robots with this list, a personal backend has been created for accessing the additional UI service https://mockapi.io/.
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+Zastosunku has the following routes:
 
-## Подготовка к работе
+“/” - home page with a detailed description of the services that the company provides
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+“/catalog” - a page to display a catalog of campers of various configurations
 
-## Деплой
+“/favorites” - a page with comments (designed at your discretion) that were given to the koristuvach in love
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+If the customer searches for a route that he does not understand, he is redirected to his home page.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+Camper - це застосунок для компанії, що надає послуги надання в Україні камперів в оренду. Застосунок складається з 3х сторінок.
 
-### Статус деплоя
+Домашня сторінка з загальним описом послуг, що надає компанія. 
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+Друга сторінка містить каталог камперів різної комплектації, які користувач може фільтрувати за місцем знаходження, обладнанням та типом.
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+Третя сторінка містить оголошення, які були додані користувачем в улюблені.
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+У разі кліку по кнопці у вигляді “серця” на картці оголошення воно додаваться до списку улюблених,  а колір кнопки змінюється.
 
-![Deployment status](./assets/deploy-status.png)
+У разі повторного кліку по кнопці у вигляді “серця” оголошення буде видалятися зі списку улюблених,  а колір кнопки змінится до початкового стану.
 
-### Живая страница
+У разі кліку по кнопці Show more відкривається модальне вікно з детальною інформацією про кампер.
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+Модальне вікно закривається по кліку на кнопку у вигляді “хрестика”, по кліку на backdrop  та натисканню на клавішу Esc.
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
+В модальному вікні міститься інформація щодо особливостей кампера і відгуків про нього. 
 
-### Маршрутизация
+В модальному вікні також міститься форма для оформлення бронювання камперу, що складається з полів name, email, booking date і comment. Поля name, email, booking date є обовʼязковими до заповнення і проходять перевірку на валідність введених значень.(У випадку невалідних даних форма не відправляється, у випадку валідної форми - сторінка оновлюється).
 
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
+Для роботи зі списком оголошень створен персональний бекенд для розробки за допомогою UI-сервісу https://mockapi.io/. 
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+У застосунку є такі маршрути:
 
-## Как это работает
+“/” - домашня сторінка з загальним описом послуг, що надає компанія
 
-![How it works](./assets/how-it-works.png)
+“/catalog” - сторінка, що містить каталог камперів різної комплектації
 
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+“/favorites” - сторінка з оголошеннями(оформлення на ваш розсуд), які були додані користувачем в улюблені
+
+Якщо користувач зайшов за маршрутом, якого не існує, його перенаправляє на  домашню сторінку.

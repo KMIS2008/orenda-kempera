@@ -118,9 +118,4 @@ export const Svg = styled.svg`
  
  fill: ${(p) => p.theme.colors.white};
 
-  &:hover,
-  :focus {
-    fill: ${(p) => p.theme.colors.red};
-    
-  }
 `;
