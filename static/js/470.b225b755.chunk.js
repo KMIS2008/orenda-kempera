@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkorenda_kempera=self.webpackChunkorenda_kempera||[]).push([[470],{1470:function(r,e,n){n.r(e),n.d(e,{default:function(){return s}});var u=n(4420),a=n(6351),t=n(1028),c=n(184),i=function(){var r=(0,u.v9)(a._);return(0,c.jsx)(c.Fragment,{children:(0,c.jsx)("ul",{children:r.map((function(r){return(0,c.jsx)(t.r,{value:r},r._id)}))})})};function s(){return(0,c.jsxs)("div",{children:[(0,c.jsx)("h1",{children:"Your favorite campers"}),(0,c.jsx)(i,{})]})}}}]);
-//# sourceMappingURL=470.b225b755.chunk.js.map
