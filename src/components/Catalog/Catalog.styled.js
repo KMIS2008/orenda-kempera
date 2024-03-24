@@ -53,7 +53,7 @@ export const Button = styled.button`
 
   &:hover,
   :focus {
-    border: ${(p) => p.theme.colors.red};
+    border: solid 1px ${p=>p.theme.colors.red};
   }
 `;
 
