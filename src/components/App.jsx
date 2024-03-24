@@ -17,10 +17,6 @@ export const App = () => {
           <Route index element={<HomePage/>}/>
           <Route path="catalog" element={<CatalogPage/>}/>
           <Route path="favorite" element={<FavoritePage/>}/>
-          {/* <Route  path="catalog/:camperId" element={<CampareDetails/>}>
-            <Route path="features" element={<Features/>}/>
-            <Route path="reviews" element={<Reviews/>}/>
-          </Route> */}
         </Route>
         <Route path="*" element={<HomePage/>} />
       </Routes>

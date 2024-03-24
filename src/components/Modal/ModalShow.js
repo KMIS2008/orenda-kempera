@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import BookForm from '../Book/BookForm';
 
-// import styles from "./ModalShow.module.css";
 
 import sprite from '../../assets/sprite.svg';
 
@@ -265,7 +264,6 @@ export const ModalShow = ({ isModalOpen, setIsOpen, data }) => {
 
  )}
       
-     
       </Modal>
       
 
