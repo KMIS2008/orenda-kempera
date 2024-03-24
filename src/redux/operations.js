@@ -15,3 +15,12 @@ export const fetchCamperCatalog = createAsyncThunk("catalog/fetchAll", async (_,
     }
 
 })
+
+export const addContact = createAsyncThunk("catalog/addReservation", async ({ name, date, email, message}, thunkAPI)=>{
+    try {
+        const response = await axios.post("/catalog", { name, date, email, message});
+        return response.data;
+    } catch (e) {
+        return thunkAPI.rejectWithValue(e.message)
+    }
+})

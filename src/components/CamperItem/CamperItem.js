@@ -4,7 +4,9 @@ import {ContainerItem, Image, Title, Header, Price, LocalRewiew, Reviews, Locati
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {ModalShow} from '../Modal/ModalShow';
-import{addFavorite} from '../../redux/catalogSlice';
+import{addFavorite, removeFavorite} from '../../redux/catalogSlice';
+import { useSelector } from 'react-redux';
+import {selectFavourite} from '../../redux/selectors';
 
 export const CamperItem = ({value}) => {
     const {
@@ -22,6 +24,23 @@ export const CamperItem = ({value}) => {
       const [isOpenModal, setIsOpenModal] = useState(false);
       const dispatch = useDispatch();
 
+      const favorites = useSelector(selectFavourite);
+
+      const handleFavoriteClick = (value) => {
+        console.log(value)
+        
+        const isFavorite = favorites.some((item) => item._id === value._id);
+      
+        if (isFavorite) {
+          dispatch(removeFavorite(value));
+        } else {
+
+          dispatch(addFavorite(value));
+        }
+        console.log(favorites)
+        console.log(isFavorite)
+      }
+
     return (
         <>
                     <ContainerItem>
@@ -30,7 +49,7 @@ export const CamperItem = ({value}) => {
                             <Header>
                                  <Title>{name}</Title>
                                 <Price 
-                                onClick={()=>{dispatch(addFavorite(value))}}
+                                onClick={() => handleFavoriteClick(value)}
                                 >€{price}.00
                                   <span>          
                                     <Svg width= '24px' height='24px'>

@@ -116,11 +116,11 @@ export const ButtonMore = styled.button`
 
 export const Svg = styled.svg`
  
- fill:"#101828";
+ fill: ${(p) => p.theme.colors.white};
 
   &:hover,
   :focus {
-    fill:"#e44848";
+    fill: ${(p) => p.theme.colors.red};
     
   }
 `;
